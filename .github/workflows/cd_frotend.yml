@@ -23,4 +23,4 @@ jobs:
           build-args:
             - DB_URL=${{ secrets.DB_URL }}
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/Todo-frontend:${{ github.sha }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/todo-frontend:${{ github.sha }}

@@ -21,4 +21,4 @@ jobs:
           context: .
           file: ./docker/Dockerfile.ws
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/Todo-wsbackend:${{ github.sha }}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/todo-wsbackend:${{ github.sha }}
