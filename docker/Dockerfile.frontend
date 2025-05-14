@@ -1,0 +1,16 @@
+FROM oven/bun:1
+
+ARG DB_URL
+
+WORKDIR /app
+
+COPY . .
+
+RUN bun install
+
+RUN bun run generate:db
+RUN DB_URL=$DB_URL bun run build
+
+EXPOSE 3000
+
+CMD ["bun"," start:frontend"]

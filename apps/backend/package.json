@@ -1,0 +1,25 @@
+{
+  "name": "backend",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "bun build --outdir=dist --target=node16 --format=cjs --minify --sourcemap",
+    "start": "bun run index.ts",
+    "start:prod": "bun dist/index.js",
+    "lint": "bun run lint:ts",
+    "lint:ts": "bun bun eslint . --ext .ts",
+    "test": "bun test"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "@types/express": "^5.0.1",
+    "express": "^5.1.0",
+    "@repo/db": "*"
+  }
+}
